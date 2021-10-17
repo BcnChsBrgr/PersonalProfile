@@ -1,23 +1,52 @@
-import logo from './logo.svg';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import HomeIcon from '@mui/icons-material/Home';
+import {AppBar, Avatar, Box, IconButton, Toolbar} from '@mui/material'
+
+import Home from "./components/Home";
+import About from "./components/About";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Box sx={{ flexGrow: 1 }}>
+          <AppBar position="static">
+            <Toolbar variant="dense">
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="open drawer"
+                sx={{ mr: 2 }}
+                href="/"
+              >
+                <HomeIcon />
+              </IconButton>
+              <Box sx={{ flexGrow: 1 }} />
+              <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                <IconButton
+                  size="large"
+                  edge=""
+                  color="inherit"
+                  sx={{mr:2}}
+                  href="/about"
+                >
+                  <Avatar src="/avatar.jpeg"></Avatar>
+                </IconButton>
+              </Box>
+            </Toolbar>
+          </AppBar>
+        </Box>
+          <Switch>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route exact path='/about'>
+              <About />
+            </Route>
+          </Switch>
+      </Router>
     </div>
   );
 }
