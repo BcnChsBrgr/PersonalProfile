@@ -1,7 +1,7 @@
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
 import {AppBar, Avatar, Box, IconButton, Toolbar} from '@mui/material'
-
+import avatar from "./img/avatar.jpeg";
 import Home from "./components/Home";
 import About from "./components/About";
 import './App.css';
@@ -32,7 +32,7 @@ function App() {
                   sx={{mr:2}}
                   href="/about"
                 >
-                  <Avatar src="/avatar.jpeg"></Avatar>
+                  <Avatar src={avatar}></Avatar>
                 </IconButton>
               </Box>
             </Toolbar>
