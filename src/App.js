@@ -1,9 +1,9 @@
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Link, Route} from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
 import {AppBar, Avatar, Box, IconButton, Toolbar} from '@mui/material'
 import avatar from "./img/avatar.jpeg";
 import Home from "./components/Home";
-import About from "./components/About";
+// import About from "./components/About";
 import './App.css';
 
 function App() {
@@ -13,16 +13,17 @@ function App() {
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static">
             <Toolbar variant="dense">
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="open drawer"
-                sx={{ mr: 2 }}
-                href="/"
-              >
-                <HomeIcon />
-              </IconButton>
+              <Link to="/">
+                <IconButton
+                  size="large"
+                  edge="start"
+                  style={{color: "white"}}
+                  aria-label="open drawer"
+                  sx={{ mr: 2 }}
+                >
+                  <HomeIcon />
+                </IconButton>
+              </Link>
               <Box sx={{ flexGrow: 1 }} />
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <IconButton
@@ -30,7 +31,7 @@ function App() {
                   edge=""
                   color="inherit"
                   sx={{mr:2}}
-                  href="/about"
+                  href="https://www.linkedin.com/in/yu-hin-ng-4797aa141/"
                 >
                   <Avatar src={avatar}></Avatar>
                 </IconButton>
@@ -41,9 +42,6 @@ function App() {
           <Switch>
             <Route exact path='/'>
               <Home />
-            </Route>
-            <Route exact path='/about'>
-              <About />
             </Route>
           </Switch>
       </Router>
