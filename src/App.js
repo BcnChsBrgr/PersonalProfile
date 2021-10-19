@@ -1,12 +1,29 @@
 import {BrowserRouter as Router, Switch, Link, Route} from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
-import {AppBar, Avatar, Box, IconButton, Toolbar} from '@mui/material'
+import { makeStyles } from '@mui/styles';
+import {AppBar, Avatar, Box, IconButton, Toolbar} from '@mui/material';
 import avatar from "./img/avatar.jpeg";
 import Home from "./components/Home";
-// import About from "./components/About";
-import './App.css';
+import { color } from "@mui/system";
+
+const useStyles = makeStyles({
+  root: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    border: 0,
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    height: 48,
+    padding: '0 30px',
+  },
+  Home: {
+    backgroundColor: 'black'
+  }
+});
 
 function App() {
+  const classes = useStyles();
+
   return (
     <div className="App">
       <Router>
@@ -41,7 +58,7 @@ function App() {
         </Box>
           <Switch>
             <Route exact path='/'>
-              <Home />
+              <Home className={`${classes.Home }`}/>
             </Route>
           </Switch>
       </Router>
