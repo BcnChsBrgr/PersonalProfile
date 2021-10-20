@@ -2,9 +2,10 @@ import {BrowserRouter as Router, Switch, Link, Route} from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
 import { makeStyles } from '@mui/styles';
 import {AppBar, Avatar, Box, IconButton, Toolbar} from '@mui/material';
+import Typography from '@mui/material/Typography';
 import avatar from "./img/avatar.jpeg";
+import startlight from "./img/startlight.jpeg";
 import Home from "./components/Home";
-import { color } from "@mui/system";
 
 const useStyles = makeStyles({
   root: {
@@ -15,6 +16,26 @@ const useStyles = makeStyles({
     color: 'white',
     height: 48,
     padding: '0 30px',
+  },
+  topUnderBanner: {
+    backgroundImage: `url(${startlight})`,
+    transform: 'translate3d(0px, 0px, 0px)',
+    height: '80vh',
+  },
+  personal: {
+    display: 'block',
+    width: '90hv',
+    minWidth: '90vh',
+    paddingTop: '50px',
+    paddingLeft: '15px',
+    zIndex: '-1'
+  },
+  personalInfo: {
+    color: '#FFFFFF',
+    padding: '15px 15px 15px 15px',
+  },
+  container: {
+    minWidth: '90hv'
   },
   Home: {
     backgroundColor: 'black'
@@ -57,9 +78,17 @@ function App() {
           </AppBar>
         </Box>
           <Switch>
-            <Route exact path='/'>
-              <Home className={`${classes.Home }`}/>
-            </Route>
+            <div className={`${classes.topUnderBanner}`}>
+              <div className={`${classes.personal}`}>
+                <Typography className={`${classes.personalInfo}`} variant="h1">Yu Hin NG</Typography>
+                <Typography className={`${classes.personalInfo}`} variant="h4">a backend engineer</Typography>
+              </div>
+            </div>
+            <div className={`${classes.container}`}>
+              <Route exact path='/'>
+                <Home className={`${classes.Home }`}/>
+              </Route>
+            </div>
           </Switch>
       </Router>
     </div>
