@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import avatar from "./img/avatar.jpeg";
 import startlight from "./img/startlight.jpeg";
 import Home from "./components/Home";
+import About from "./components/About";
 
 const useStyles = makeStyles({
   root: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles({
     height: 48,
     padding: '0 30px',
   },
-  topUnderBanner: {
+  TopperDown: {
     backgroundImage: `url(${startlight})`,
     transform: 'translate3d(0px, 0px, 0px)',
     height: '80vh',
@@ -34,8 +35,15 @@ const useStyles = makeStyles({
     color: '#FFFFFF',
     padding: '15px 15px 15px 15px',
   },
-  container: {
-    minWidth: '90hv'
+  containerBox: {
+    display: 'block',
+    margin: '30px 15px 15px',
+    padding: '15px',
+    borderRadius: '25px 25px 0 0',
+    background: '#F8F8F8',
+    minWidth: '90hv',
+    zIndex: '1',
+    boxShadow: '1px 5px 5px #C8C8C8'
   },
   Home: {
     backgroundColor: 'black'
@@ -77,19 +85,23 @@ function App() {
             </Toolbar>
           </AppBar>
         </Box>
-          <Switch>
-            <div className={`${classes.topUnderBanner}`}>
-              <div className={`${classes.personal}`}>
-                <Typography className={`${classes.personalInfo}`} variant="h1">Yu Hin NG</Typography>
-                <Typography className={`${classes.personalInfo}`} variant="h4">a backend engineer</Typography>
-              </div>
-            </div>
-            <div className={`${classes.container}`}>
-              <Route exact path='/'>
-                <Home className={`${classes.Home }`}/>
+          
+        <div className={`${classes.TopperDown}`}>
+          <div className={`${classes.personal}`}>
+            <Typography className={`${classes.personalInfo}`} variant="h1">Yu Hin NG</Typography>
+            <Typography className={`${classes.personalInfo}`} variant="h4">a backend engineer</Typography>
+          </div>
+          <div className={`${classes.containerBox}`}>
+            <Switch>
+              <Route  path='/'>
+                <Home />
               </Route>
-            </div>
-          </Switch>
+              <Route path='/about'>
+                <About />
+              </Route>
+            </Switch>
+          </div>
+        </div>
       </Router>
     </div>
   );
