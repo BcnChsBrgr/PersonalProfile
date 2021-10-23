@@ -47,7 +47,7 @@ const useStyles = makeStyles({
   },
   Home: {
     backgroundColor: 'black'
-  }
+  },
 });
 
 function App() {
@@ -74,7 +74,7 @@ function App() {
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <IconButton
                   size="large"
-                  edge=""
+                  edge="end"
                   color="inherit"
                   sx={{mr:2}}
                   href="https://www.linkedin.com/in/yu-hin-ng-4797aa141/"
@@ -88,12 +88,12 @@ function App() {
           
         <div className={`${classes.TopperDown}`}>
           <div className={`${classes.personal}`}>
-            <Typography className={`${classes.personalInfo}`} variant="h1">Yu Hin NG</Typography>
-            <Typography className={`${classes.personalInfo}`} variant="h4">a backend engineer</Typography>
+            <Typography className={`${classes.personalInfo}`} variant="h1">BcnChsBrgr</Typography>
+            <Typography className={`${classes.personalInfo}`} variant="h4">Backend Engineer</Typography>
           </div>
           <div className={`${classes.containerBox}`}>
             <Switch>
-              <Route  path='/'>
+              <Route path='/'>
                 <Home />
               </Route>
               <Route path='/about'>
