@@ -1,5 +1,5 @@
 import Typography from '@mui/material/Typography';
-import About from './About'
+import Cert from './Cert'
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -21,12 +21,17 @@ function Home() {
     const classes = useStyles();
     return (
         <div className={`${classes.divHome}`}>
-            <Typography className={`${classes.HomeTitle}`} variant="h1">Build Things</Typography>
+            <Typography className={`${classes.HomeTitle}`} variant="h3">Objective</Typography>
             <Typography className={`${classes.HomeDescription}`} variant="h6">
-                This is BcnChsBrgr, responses to build backend service,
-                
+                Software Analyst; Backend developer
             </Typography>
-            <About />
+            <Typography className={`${classes.HomeTitle}`} variant="h3">SELFIE</Typography>
+            <Typography className={`${classes.HomeDescription}`} variant="h6">
+                I was started my professional career as a programme in <a href="https://www.hkt.com/for-your-home/hkt-premier?locale=en">HKT Ltd</a> in 2015. 
+                Back in the days, I help develop web-based system for customer-service department. 
+                That system helps CS persons accessing the customer records for help quickly.
+            </Typography>
+            <Cert />
         </div>
     );
 }
