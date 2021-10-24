@@ -19,14 +19,15 @@ const useStyles = makeStyles({
     padding: '0 30px',
   },
   TopperDown: {
+    width: '100%',
     backgroundImage: `url(${startlight})`,
     transform: 'translate3d(0px, 0px, 0px)',
     height: '80vh',
   },
   personal: {
     display: 'block',
-    width: '90hv',
-    minWidth: '90vh',
+    width: '100%',
+    minWidth: '400px',
     paddingTop: '50px',
     paddingLeft: '15px',
     zIndex: '-1'
@@ -41,7 +42,7 @@ const useStyles = makeStyles({
     padding: '15px',
     borderRadius: '25px 25px 0 0',
     background: '#F8F8F8',
-    minWidth: '90hv',
+    midWidth: '370px',
     zIndex: '1',
     boxShadow: '1px 5px 5px #C8C8C8'
   },
@@ -88,7 +89,8 @@ function App() {
           
         <div className={`${classes.TopperDown}`}>
           <div className={`${classes.personal}`}>
-            <Typography className={`${classes.personalInfo}`} variant="h1">BcnChsBrgr</Typography>
+            <Typography className={`${classes.personalInfo}`} variant="h1">BcnChs
+            Brgr</Typography>
             <Typography className={`${classes.personalInfo}`} variant="h4">Backend Engineer</Typography>
           </div>
           <div className={`${classes.containerBox}`}>
