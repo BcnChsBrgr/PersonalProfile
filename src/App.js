@@ -1,14 +1,11 @@
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import MenuBar from './components/MenuBar';
 import { makeStyles } from '@mui/styles';
-import {Box,} from '@mui/material';
-import Typography from '@mui/material/Typography';
+import {Box,Grid, Typography} from '@mui/material';
 import startlight from "./img/startlight.jpeg";
 import Home from "./components/Home";
 import About from "./components/About";
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import Eyore from './img/eyore.jpeg'
+import MenuBar from './components/MenuBar';
+import PersonalInformation from "./components/PersonalInformation";
 
 const useStyles = makeStyles({
     root: {
@@ -57,6 +54,7 @@ const useStyles = makeStyles({
     profilePic:{
         margin: 'auto',
         display: 'block',
+        width: '100%',
         maxWidth: '100%',
         maxHeight: '100%'
     }
@@ -79,26 +77,19 @@ function App() {
                     <div className={`${classes.containerBox}`}>
                         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                             <Grid item sm={9}>
-                                <item>
-                                    <Switch>
-                                        <Route path='/'>
-                                            <Home />
-                                        </Route>
-                                        <Route path='/about'>
-                                            <About />
-                                        </Route>
-                                    </Switch>
-                                </item>
+                                
+                                <Switch>
+                                    <Route path='/'>
+                                        <Home />
+                                    </Route>
+                                    <Route path='/about'>
+                                        <About />
+                                    </Route>
+                                </Switch>
+                                
                             </Grid>
                             <Grid item sm={3}>
-                                <item>
-                                    <Paper className={`${classes.paperClas}`} elevation={3}>
-                                        <Grid container spacing={2}>
-                                            <img className={`${classes.profilePic}`} alt="complex" src={Eyore} />
-                                        </Grid>
-                                        <Grid>hihi</Grid>
-                                    </Paper>
-                                </item>
+                                <PersonalInformation />
                             </Grid>
                         </Grid>
                     </div>
