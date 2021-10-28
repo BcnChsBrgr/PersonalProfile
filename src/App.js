@@ -19,6 +19,7 @@ const useStyles = makeStyles({
     },
     TopperDown: {
         width: '100%',
+        position: 'absolate',
         backgroundImage: `url(${startlight})`,
         transform: 'translate3d(0px, 0px, 0px)',
         height: '80vh',
@@ -77,7 +78,6 @@ function App() {
                     <div className={`${classes.containerBox}`}>
                         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                             <Grid item sm={9}>
-                                
                                 <Switch>
                                     <Route path='/'>
                                         <Home />

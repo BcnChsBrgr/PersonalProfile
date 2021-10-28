@@ -27,7 +27,7 @@ function MenuBar(){
                         sx={{mr:2}}
                         href="https://www.linkedin.com/in/yu-hin-ng-4797aa141/"
                     >
-                        <Avatar src={avatar}></Avatar>
+                        <Avatar src={avatar} variant="circular"></Avatar>
                     </IconButton>
                 </Box>
             </Toolbar>

@@ -6,46 +6,33 @@ import LocationOnTwoToneIcon from '@mui/icons-material/LocationOnTwoTone';
 import DomainVerificationTwoToneIcon from '@mui/icons-material/DomainVerificationTwoTone';
 
 const useStyles = makeStyles({
-
+    profilePic: {
+        margin: '15px auto'
+    }
 });
 
 function PersonalInformation(){
-    
-    const classes = useStyles();
-
+    const classes = useStyles();    
     return (
-        <Card sx={{p:2, maxWidth:'250px', display: 'flex'}}>
-            <List 
-                sx={{
-                    width: '100%',
-                    maxWidth: 360,
-                    bgcolor: 'background.paper',
-                    }}
-            >
-                <ListItem>
-                    <Avatar variant="circular" className={`${classes.profilePic}`} alt="complex" src={Eyore} 
-                        sx={{minWidth: '200px', minHeight: '200px'}}
-                    />
+        <Card sx={{p:2, display: 'flex'}}>
+            <List sx={{width: '100%',maxWidth: 360,bgcolor: 'background.paper'}}>
+                <ListItem >
+                    <Avatar variant="circular" className={`${classes.profilePic}`} alt="complex" src={Eyore} sx={{width: '80%', minHeight: '200px'}}/>
                 </ListItem>
                 <Divider variant="inset" component="li" />
                 
                 <ListItem>
                     <ListItemAvatar>
-                        <Avatar>
-                            <AccountCircleTwoToneIcon />
-                        </Avatar>
+                        <Avatar><AccountCircleTwoToneIcon /></Avatar>
                     </ListItemAvatar>
                     <ListItemText primary="BcnChsBrgr" secondary="Software Analyst" />
-                
                 </ListItem>
                 
                 <Divider variant="inset" component="li" />
                 
                 <ListItem>
                     <ListItemAvatar>
-                        <Avatar>
-                            <LocationOnTwoToneIcon />
-                        </Avatar>
+                        <Avatar><LocationOnTwoToneIcon /></Avatar>
                     </ListItemAvatar>
                     <ListItemText primary="Hong Kong" secondary="will visit UK shortly" />
                 </ListItem>
@@ -53,9 +40,7 @@ function PersonalInformation(){
                
                <ListItem>
                    <ListItemAvatar>
-                       <Avatar>
-                            <DomainVerificationTwoToneIcon />
-                       </Avatar>
+                       <Avatar><DomainVerificationTwoToneIcon /></Avatar>
                     </ListItemAvatar>
                    <ListItemText primary="Developer-Associate" secondary="AWS Certificated" />
                </ListItem>
