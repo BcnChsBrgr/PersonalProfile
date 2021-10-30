@@ -15,35 +15,17 @@ function listItem(item, index){
     
     return (
         <div>
-            <ListItem key={index}>
-                {str}
-                <ListItemText primary={item.primary} secondary={item.secondary} />
-            </ListItem>
+            <ListItem key={index}> {str} <ListItemText primary={item.primary} secondary={item.secondary} /> </ListItem>
             <Divider variant="inset" component="li" />
         </div>
     )
 }
 
 const aboutMe = [
-    {
-        icon: 'personalImage',
-        src: Eyore
-    },
-    {
-        icon: <AccountCircleTwoToneIcon />,
-        primary: 'BcnChsBrgr',
-        secondary: 'Software Analyst'
-    },
-    {
-        icon: <LocationOnTwoToneIcon />,
-        primary: 'Hong Kong',
-        secondary: 'will visit UK shortly'
-    },
-    {
-        icon: <DomainVerificationTwoToneIcon />,
-        primary: 'Developer-Associate',
-        secondary: 'AWS Certificated'
-    }
+    { icon: 'personalImage',src: Eyore },
+    { icon: <AccountCircleTwoToneIcon />, primary: 'BcnChsBrgr', secondary: 'Software Analyst' },
+    { icon: <LocationOnTwoToneIcon />, primary: 'Hong Kong', secondary: 'will visit UK shortly' },
+    { icon: <DomainVerificationTwoToneIcon />, primary: 'Developer-Associate', secondary: 'AWS Certificated' }
 ]
 
 function PersonalInformation(){
@@ -51,7 +33,7 @@ function PersonalInformation(){
     
     return (
         <Card sx={{p:2, display: 'flex'}}>
-            <List sx={{width: '100%',maxWidth: 360,bgcolor: 'background.paper'}}>
+            <List sx={{width: '100%',maxWidth: '360px',bgcolor: 'background.paper'}}>
                 {list}
             </List>
         </Card>
