@@ -1,53 +1,60 @@
 import {Avatar, Card, Divider, List, ListItem, ListItemAvatar, ListItemText} from '@mui/material';
 import Eyore from '../img/eyore.jpeg';
-import { makeStyles } from '@mui/styles';
+import Icon from '@mui/material/Icon';
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import LocationOnTwoToneIcon from '@mui/icons-material/LocationOnTwoTone';
 import DomainVerificationTwoToneIcon from '@mui/icons-material/DomainVerificationTwoTone';
 
-const useStyles = makeStyles({
-    profilePic: {
-        margin: '15px auto'
+function listItem(item, index){
+    let str
+    if(typeof item.icon == 'string'){
+        str = (<Avatar variant="circular" alt="complex" src={item.src} sx={{width: '100%', minWidth:'200px', minHeight: '200px', padding: '15px auto'}}/>)
+    } else {
+        str = (<ListItemAvatar><Avatar variant="circular"><Icon>{item.icon}</Icon></Avatar></ListItemAvatar>)
     }
-});
+    
+    return (
+        <div>
+            <ListItem key={index}>
+                {str}
+                <ListItemText primary={item.primary} secondary={item.secondary} />
+            </ListItem>
+            <Divider variant="inset" component="li" />
+        </div>
+    )
+}
+
+const aboutMe = [
+    {
+        icon: 'personalImage',
+        src: Eyore
+    },
+    {
+        icon: <AccountCircleTwoToneIcon />,
+        primary: 'BcnChsBrgr',
+        secondary: 'Software Analyst'
+    },
+    {
+        icon: <LocationOnTwoToneIcon />,
+        primary: 'Hong Kong',
+        secondary: 'will visit UK shortly'
+    },
+    {
+        icon: <DomainVerificationTwoToneIcon />,
+        primary: 'Developer-Associate',
+        secondary: 'AWS Certificated'
+    }
+]
 
 function PersonalInformation(){
-    const classes = useStyles();    
+    let list = aboutMe.map((item, index) => listItem(item, index))
+    
     return (
         <Card sx={{p:2, display: 'flex'}}>
             <List sx={{width: '100%',maxWidth: 360,bgcolor: 'background.paper'}}>
-                <ListItem >
-                    <Avatar variant="circular" className={`${classes.profilePic}`} alt="complex" src={Eyore} sx={{width: '80%', minHeight: '200px'}}/>
-                </ListItem>
-                <Divider variant="inset" component="li" />
-                
-                <ListItem>
-                    <ListItemAvatar>
-                        <Avatar><AccountCircleTwoToneIcon /></Avatar>
-                    </ListItemAvatar>
-                    <ListItemText primary="BcnChsBrgr" secondary="Software Analyst" />
-                </ListItem>
-                
-                <Divider variant="inset" component="li" />
-                
-                <ListItem>
-                    <ListItemAvatar>
-                        <Avatar><LocationOnTwoToneIcon /></Avatar>
-                    </ListItemAvatar>
-                    <ListItemText primary="Hong Kong" secondary="will visit UK shortly" />
-                </ListItem>
-                <Divider variant="inset" component="li" /> 
-               
-               <ListItem>
-                   <ListItemAvatar>
-                       <Avatar><DomainVerificationTwoToneIcon /></Avatar>
-                    </ListItemAvatar>
-                   <ListItemText primary="Developer-Associate" secondary="AWS Certificated" />
-               </ListItem>
+                {list}
             </List>
-            
         </Card>
-
     );
 }
 export default PersonalInformation;
