@@ -1,5 +1,6 @@
 import Typography from '@mui/material/Typography';
 import Cert from './Cert'
+import PersonalLive from './PersonalLive'
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -32,6 +33,7 @@ function Home() {
                 That system helps CS persons accessing the customer records for help quickly. 
             </Typography>
             <Cert />
+            <PersonalLive />
         </div>
     );
 }

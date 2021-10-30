@@ -1,6 +1,5 @@
-import {Avatar, Card, Divider, List, ListItem, ListItemAvatar, ListItemText} from '@mui/material';
+import {Avatar, Card, Divider, List, ListItem, ListItemAvatar, ListItemText, Icon} from '@mui/material';
 import Eyore from '../img/eyore.jpeg';
-import Icon from '@mui/material/Icon';
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import LocationOnTwoToneIcon from '@mui/icons-material/LocationOnTwoTone';
 import DomainVerificationTwoToneIcon from '@mui/icons-material/DomainVerificationTwoTone';
