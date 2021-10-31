@@ -5,7 +5,7 @@ import startlight from "./img/startlight.jpeg";
 import Home from "./components/Home";
 import About from "./components/About";
 import MenuBar from './components/MenuBar';
-import PernalLive from './components/PersonalLive';
+import Career from './components/Career';
 import PersonalInformation from "./components/PersonalInformation";
 
 const useStyles = makeStyles({
@@ -83,8 +83,8 @@ function App() {
                                     <Route path='/'>
                                         <Home />
                                     </Route>
-                                    <Route path="/PersonalLive">
-                                        <PernalLive />
+                                    <Route path="/Career">
+                                        <Career />
                                     </Route>
                                     <Route path='/about'>
                                         <About />

@@ -69,7 +69,7 @@ const professionalLive = [
     }
 ]
 
-function PersonalLive(){
+function Career(){
     let list = professionalLive.map((professional, index )=> timelineItemClasses(professional, index))
     return (
         <div>
@@ -80,4 +80,4 @@ function PersonalLive(){
         </div>
     );
 }
-export default PersonalLive;
+export default Career;
