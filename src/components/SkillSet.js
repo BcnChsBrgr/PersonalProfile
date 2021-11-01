@@ -8,12 +8,12 @@ const useStyles = makeStyles({
     },
 });
 
-function Cert() {
+function SkillSet() {
     const classes = useStyles();
     return (
         <div>
-            <Typography className={`${classes.HomeTitle}`} variant="h3">Certificate</Typography>
+            <Typography className={`${classes.HomeTitle}`} variant="h3">Skill Set</Typography>
         </div>
     );
 }
-export default Cert;
+export default SkillSet;

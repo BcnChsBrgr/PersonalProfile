@@ -3,6 +3,14 @@ import Eyore from '../img/eyore.jpeg';
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import LocationOnTwoToneIcon from '@mui/icons-material/LocationOnTwoTone';
 import DomainVerificationTwoToneIcon from '@mui/icons-material/DomainVerificationTwoTone';
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles({
+    PersonalCard: {
+        maxWidth: '285px',
+        width: '100%'
+    },
+});
 
 function listItem(item, index){
     let str
@@ -28,11 +36,12 @@ const aboutMe = [
 ]
 
 function PersonalInformation(){
+    const classes = useStyles();
     let list = aboutMe.map((item, index) => listItem(item, index))
     
     return (
-        <Card sx={{p:2, display: 'flex'}}>
-            <List sx={{width: '100%',maxWidth: '360px',bgcolor: 'background.paper'}}>
+        <Card className={`${classes.PersonalCard}`}>
+            <List sx={{width: '100%', maxWidth: '250px', bgcolor: 'background.paper'}}>
                 {list}
             </List>
         </Card>

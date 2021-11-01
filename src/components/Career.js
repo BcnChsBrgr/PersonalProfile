@@ -4,6 +4,14 @@ import tvb from '../img/tvb.png';
 import aswatson from '../img/aswatson.png';
 import mekim from '../img/mekim.png'
 import hkt from '../img/hkt.png'
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles({
+    HomeTitle: {
+        width: 'auto',
+        padding: '30px'
+    },
+});
 
 function timelineItemClasses(item, index){
     console.log(item, index)
@@ -70,10 +78,11 @@ const professionalLive = [
 ]
 
 function Career(){
+    const classes = useStyles();
     let list = professionalLive.map((professional, index )=> timelineItemClasses(professional, index))
     return (
         <div>
-            <Typography>Career Life</Typography>
+            <Typography className={`${classes.HomeTitle}`} variant="h3">Career Life</Typography>
             <Timeline position="alternate">
                 {list}
             </Timeline>
