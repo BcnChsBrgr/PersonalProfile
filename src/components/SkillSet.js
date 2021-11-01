@@ -6,6 +6,7 @@ import nodejs from '../img/nodejs.png';
 import php from '../img/php.png';
 import aws from '../img/aws.png';
 import mysql from '../img/mysql.png';
+import es from '../img/elasticsearch.svg';
 
 const useStyles = makeStyles({
     HomeTitle: {
@@ -18,22 +19,11 @@ const useStyles = makeStyles({
 });
 
 const bedgeList = [
-    {
-        name: 'Node.js',
-        src: nodejs
-    },
-    {
-        name: 'php',
-        src: php
-    },
-    {
-        name: 'aws',
-        src: aws
-    },
-    {
-        name: 'mysql',
-        src: mysql
-    }
+    { name: 'Node.js', src: nodejs },
+    { name: 'php', src: php },
+    { name: 'aws', src: aws },
+    { name: 'mysql', src: mysql },
+    { name: 'elastic search', src: es }
 ]
 
 function bedge(displayBedge){

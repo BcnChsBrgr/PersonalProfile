@@ -29,7 +29,7 @@ function listItem(item, index){
 }
 
 const aboutMe = [
-    { icon: 'personalImage',src: Eyore },
+    { icon: 'personalImage', src: Eyore },
     { icon: <AccountCircleTwoToneIcon />, primary: 'BcnChsBrgr', secondary: 'Software Analyst' },
     { icon: <LocationOnTwoToneIcon />, primary: 'Hong Kong', secondary: 'will visit UK shortly' },
     { icon: <DomainVerificationTwoToneIcon />, primary: 'Developer-Associate', secondary: 'AWS Certificated' }
