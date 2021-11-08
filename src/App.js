@@ -39,13 +39,16 @@ const useStyles = makeStyles({
     },
     containerBox: {
         display: 'block',
-        margin: '30px 15px 15px',
+        margin: '30px auto',
         padding: '15px',
         borderRadius: '25px 25px 0 0',
         background: '#F8F8F8',
-        midWidth: '370px',
+        width: '90%',
         zIndex: '1',
         boxShadow: '1px 5px 5px #C8C8C8'
+    },
+    gridBox: {
+        width: '100%'
     },
     Home: {
         backgroundColor: 'black'
@@ -77,8 +80,8 @@ function App() {
                         <Typography className={`${classes.personalInfo}`} variant="h4">Backend Engineer</Typography>
                     </div>
                     <div className={`${classes.containerBox}`}>
-                        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                            <Grid item sm={9}>
+                        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} className={`${classes.gridBox}`}>
+                            <Grid item sm={9} className={`${classes.gridBox}`}>
                                 <Switch>
                                     <Route path='/'>
                                         <Home />

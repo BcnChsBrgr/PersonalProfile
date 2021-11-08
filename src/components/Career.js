@@ -8,15 +8,14 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
     HomeTitle: {
-        width: 'auto',
-        padding: '30px'
+        width: 'auto'
     },
 });
 
-function timelineItemClasses(item, index){
-    console.log(item, index)
+function timelineItemClasses(name, item, index){
+    console.log(index)
     return (
-        <TimelineItem key={index} id={index}>
+        <TimelineItem key={index} id={index} className={`${name}`}>
             <TimelineOppositeContent sx={{ m: 'auto 0' }} align="right" variant="body2" color="text.secondary">{item.timeRange}</TimelineOppositeContent>
             <TimelineSeparator>
                 <TimelineConnector />
@@ -79,7 +78,7 @@ const professionalLive = [
 
 function Career(){
     const classes = useStyles();
-    let list = professionalLive.map((professional, index )=> timelineItemClasses(professional, index))
+    let list = professionalLive.map((professional, index)=> timelineItemClasses(classes.HomeTitle, professional, index))
     return (
         <div>
             <Typography className={`${classes.HomeTitle}`} variant="h3">Career Life</Typography>
