@@ -7,15 +7,23 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
     PersonalCard: {
-        maxWidth: '285px',
-        width: '100%'
+        width: '100%',
+        margin: '10px auto'
     },
+    personalUl:{
+        width: '100%',
+        margin: '1px auto'
+    },
+    personalList: {
+        width: '100%',
+        margin: '5px auto'
+    }
 });
 
 function listItem(item, index){
     let str
     if(typeof item.icon == 'string'){
-        str = (<Avatar variant="circular" alt="complex" src={item.src} sx={{width: '100%', minWidth:'200px', minHeight: '200px', padding: '15px auto'}}/>)
+        str = (<Avatar variant="circular" alt="complex" src={item.src} sx={{display: 'block', width: '100%', height: '100%', margin: '15px auto'}}/>)
     } else {
         str = (<ListItemAvatar><Avatar variant="circular"><Icon>{item.icon}</Icon></Avatar></ListItemAvatar>)
     }
@@ -41,7 +49,7 @@ function PersonalInformation(){
     
     return (
         <Card className={`${classes.PersonalCard}`}>
-            <List sx={{width: '100%', maxWidth: '250px', bgcolor: 'background.paper'}}>
+            <List sx={{width: '100%', maxWidth: '250px', margin: '1px auto', bgcolor: 'background.paper'}}>
                 {list}
             </List>
         </Card>
