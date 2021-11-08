@@ -20,7 +20,6 @@ const useStyles = makeStyles({
     },
     TopperDown: {
         width: '100%',
-        position: 'absolate',
         backgroundImage: `url(${startlight})`,
         transform: 'translate3d(0px, 0px, 0px)',
         height: '80vh',
@@ -30,12 +29,13 @@ const useStyles = makeStyles({
         width: '100%',
         minWidth: '400px',
         paddingTop: '50px',
-        paddingLeft: '15px',
         zIndex: '-1'
     },
     personalInfo: {
         color: '#FFFFFF',
-        padding: '15px 15px 15px 15px',
+        fontWeight: 'bold',
+        width: '90%',
+        padding: '15px 20px',
     },
     containerBox: {
         display: 'block',
@@ -76,7 +76,7 @@ function App() {
                 </Box>
                 <div className={`${classes.TopperDown}`}>
                     <div className={`${classes.personal}`}>
-                        <Typography className={`${classes.personalInfo}`} variant="h1">BcnChs Brgr</Typography>
+                        <Typography className={`${classes.personalInfo}`} variant="h2">Bcn Chs Brgr</Typography>
                         <Typography className={`${classes.personalInfo}`} variant="h4">Backend Engineer</Typography>
                     </div>
                     <div className={`${classes.containerBox}`}>
