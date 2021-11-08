@@ -81,7 +81,7 @@ function App() {
                     </div>
                     <div className={`${classes.containerBox}`}>
                         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} className={`${classes.gridBox}`}>
-                            <Grid item sm={9} className={`${classes.gridBox}`}>
+                            <Grid item xs={12} sm={12}  md={9} className={`${classes.gridBox}`}>
                                 <Switch>
                                     <Route path='/'>
                                         <Home />
@@ -93,9 +93,8 @@ function App() {
                                         <About />
                                     </Route>
                                 </Switch>
-                                
                             </Grid>
-                            <Grid item sm={3}>
+                            <Grid item xs={12} sm={12} md={3}>
                                 <PersonalInformation />
                             </Grid>
                         </Grid>
