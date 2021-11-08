@@ -35,7 +35,7 @@ const useStyles = makeStyles({
         color: '#FFFFFF',
         fontWeight: 'bold',
         width: '90%',
-        padding: '15px 20px',
+        padding: '15px 0px 0px 0px',
     },
     containerBox: {
         display: 'block',
@@ -75,10 +75,14 @@ function App() {
                     <MenuBar />
                 </Box>
                 <div className={`${classes.TopperDown}`}>
-                    <div className={`${classes.personal}`}>
-                        <Typography className={`${classes.personalInfo}`} variant="h2">Bcn Chs Brgr</Typography>
-                        <Typography className={`${classes.personalInfo}`} variant="h4">Backend Engineer</Typography>
-                    </div>
+                    <Grid container>
+                        <Grid item xs={12} sm={12} md={12}>
+                            <div className={`${classes.personal}`}>
+                                <Typography className={`${classes.personalInfo}`} variant="h3">BcnChs Brgr</Typography>
+                                <Typography className={`${classes.personalInfo}`} variant="h4">Backend Engineer</Typography>
+                            </div>
+                        </Grid>
+                    </Grid>
                     <div className={`${classes.containerBox}`}>
                         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} className={`${classes.gridBox}`}>
                             <Grid item xs={12} sm={12}  md={9} className={`${classes.gridBox}`}>
