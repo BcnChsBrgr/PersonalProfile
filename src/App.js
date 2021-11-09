@@ -27,7 +27,6 @@ const useStyles = makeStyles({
     personal: {
         display: 'block',
         width: '100%',
-        minWidth: '400px',
         paddingTop: '50px',
         zIndex: '-1'
     },
@@ -78,7 +77,7 @@ function App() {
                     <Grid container>
                         <Grid item xs={12} sm={12} md={12}>
                             <div className={`${classes.personal}`}>
-                                <Typography className={`${classes.personalInfo}`} variant="h3">BcnChs Brgr</Typography>
+                                <Typography className={`${classes.personalInfo}`} variant="h3" sx={{margin: 0}}>BcnChs Brgr</Typography>
                                 <Typography className={`${classes.personalInfo}`} variant="h4">Backend Engineer</Typography>
                             </div>
                         </Grid>
