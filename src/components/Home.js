@@ -1,6 +1,5 @@
 import Typography from '@mui/material/Typography';
 import SkillSet from './SkillSet'
-import Career from './Career'
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -41,7 +40,6 @@ function Home() {
                 In NMG, I have learn that build a mordon application on cloud, and take adventage on cloud resource. Although the cloud resource is powerful, 
                 we need to avoid spending too much on 
             </Typography>
-            <Career />
         </div>
     );
 }

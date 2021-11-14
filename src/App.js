@@ -1,13 +1,12 @@
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import { makeStyles } from '@mui/styles';
-import {Box,Grid, Typography} from '@mui/material';
+import {Box, Grid, Typography} from '@mui/material';
 import startlight from "./img/startlight.jpeg";
 import Home from "./components/Home";
 import About from "./components/About";
 import MenuBar from './components/MenuBar';
 import Career from './components/Career';
 import PersonalInformation from "./components/PersonalInformation";
-
 const useStyles = makeStyles({
     root: {
         background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
@@ -63,16 +62,11 @@ const useStyles = makeStyles({
         maxHeight: '100%'
     }
 });
-
 function App() {
     const classes = useStyles();
-
     return (
         <div className="App">
-            <Router>
-                <Box sx={{ flexGrow: 1 }}>
-                    <MenuBar />
-                </Box>
+                <Box sx={{ flexGrow: 1 }}> <MenuBar /> </Box>
                 <div className={`${classes.TopperDown}`}>
                     <Grid container>
                         <Grid item xs={12} sm={12} md={12}>
@@ -85,17 +79,11 @@ function App() {
                     <div className={`${classes.containerBox}`}>
                         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} className={`${classes.gridBox}`}>
                             <Grid item xs={12} sm={12}  md={9} className={`${classes.gridBox}`}>
-                                <Switch>
-                                    <Route path='/'>
-                                        <Home />
-                                    </Route>
-                                    <Route path="/Career">
-                                        <Career />
-                                    </Route>
-                                    <Route path='/about'>
-                                        <About />
-                                    </Route>
-                                </Switch>
+                                <Routes>
+                                    <Route exact path="/" element={<Home />} />
+                                    <Route path="/Career" element={<Career />}/>
+                                    <Route path="/about" element={<About />} />
+                                </Routes>
                             </Grid>
                             <Grid item xs={12} sm={12} md={3}>
                                 <PersonalInformation />
@@ -103,9 +91,7 @@ function App() {
                         </Grid>
                     </div>
                 </div>
-            </Router>
         </div>
     );
 }
-
 export default App;
