@@ -3,6 +3,7 @@ import Eyore from '../img/eyore.jpeg';
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import LocationOnTwoToneIcon from '@mui/icons-material/LocationOnTwoTone';
 import DomainVerificationTwoToneIcon from '@mui/icons-material/DomainVerificationTwoTone';
+import SchoolIcon from '@mui/icons-material/School';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -40,7 +41,8 @@ const aboutMe = [
     { icon: 'personalImage', src: Eyore },
     { icon: <AccountCircleTwoToneIcon />, primary: 'BcnChsBrgr', secondary: 'Software Analyst' },
     { icon: <LocationOnTwoToneIcon />, primary: 'Hong Kong', secondary: 'will visit UK shortly' },
-    { icon: <DomainVerificationTwoToneIcon />, primary: 'Developer-Associate', secondary: 'AWS Certificated' }
+    { icon: <DomainVerificationTwoToneIcon />, primary: 'Developer-Associate', secondary: 'AWS Certificated' },
+    { icon: <SchoolIcon />, primary: 'BCs in Computing Science', secondary: 'Staffordshire University'}
 ]
 
 function PersonalInformation(){

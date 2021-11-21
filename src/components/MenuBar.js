@@ -33,7 +33,7 @@ function MenuBar(){
                 >
                     <MenuIcon />
                 </IconButton>
-                <Link to="/">
+                <Link to="/PersonalProfile/">
                     <IconButton
                         size="large"
                         edge="start"
@@ -66,7 +66,7 @@ function MenuBar(){
                     'aria-labelledby': 'basic-button',
                   }}          
             >
-                <Link to="/Career"><MenuItem onClick={handleClose}>Career</MenuItem></Link>
+                <Link to="/PersonalProfile/Career"><MenuItem onClick={handleClose}>Career</MenuItem></Link>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
                 <MenuItem onClick={handleClose}>Logout</MenuItem>
             </Menu>

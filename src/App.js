@@ -66,31 +66,33 @@ function App() {
     const classes = useStyles();
     return (
         <div className="App">
-                <Box sx={{ flexGrow: 1 }}> <MenuBar /> </Box>
-                <div className={`${classes.TopperDown}`}>
-                    <Grid container>
-                        <Grid item xs={12} sm={12} md={12}>
-                            <div className={`${classes.personal}`}>
-                                <Typography className={`${classes.personalInfo}`} variant="h3" sx={{margin: 0}}>BcnChs Brgr</Typography>
-                                <Typography className={`${classes.personalInfo}`} variant="h4">Backend Engineer</Typography>
-                            </div>
+            <Box sx={{ flexGrow: 1 }}> <MenuBar /> </Box>
+            <div className={`${classes.TopperDown}`}>
+                <Grid container>
+                    <Grid item xs={12} sm={12} md={12}>
+                        <div className={`${classes.personal}`}>
+                            <Typography className={`${classes.personalInfo}`} variant="h3" sx={{margin: 0}}>BcnChs Brgr</Typography>
+                            <Typography className={`${classes.personalInfo}`} variant="h4">Backend Engineer</Typography>
+                        </div>
+                    </Grid>
+                </Grid>
+                <div className={`${classes.containerBox}`}>
+                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} className={`${classes.gridBox}`}>
+                        <Grid item xs={12} sm={12}  md={9} className={`${classes.gridBox}`}>
+                            <Routes>
+                                <Route path="/" element={<Home />} />
+                                <Route path="/PersonalProfile/" element={<Home />} />
+                                <Route path="/PersonalProfile/Career" element={<Career />}/>
+                                <Route path="/PersonalProfile/about" element={<About />} />
+                                <Route path="/*" element={<About />} />
+                            </Routes>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={3}>
+                            <PersonalInformation />
                         </Grid>
                     </Grid>
-                    <div className={`${classes.containerBox}`}>
-                        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} className={`${classes.gridBox}`}>
-                            <Grid item xs={12} sm={12}  md={9} className={`${classes.gridBox}`}>
-                                <Routes>
-                                    <Route exact path="/" element={<Home />} />
-                                    <Route path="/Career" element={<Career />}/>
-                                    <Route path="/about" element={<About />} />
-                                </Routes>
-                            </Grid>
-                            <Grid item xs={12} sm={12} md={3}>
-                                <PersonalInformation />
-                            </Grid>
-                        </Grid>
-                    </div>
                 </div>
+            </div>
         </div>
     );
 }
