@@ -37,8 +37,8 @@ function Home() {
                 I have trued my career to be a app developer in <a href="http://www.mekim.com/en/index">Mekim</a>. 
                 In Mekim, I start using develop a application that use SAP function in mobile. We have build a stock take mobile application, that helps 
                 warehourse worker for locate the items and packing them. After a while, I've decided to become a backend developer in <a href="https://www.tvb.com/">TVB New Media Group</a>.
-                In NMG, I have learn that build a mordon application on cloud, and take adventage on cloud resource. Although the cloud resource is powerful, 
-                we need to avoid spending too much on 
+                In NMG, I have learnt to build mordon application on cloud, and take adventage on cloud resource. Although the cloud resource is powerful, 
+                we need to avoid throughting money to achieve the goals. 
             </Typography>
         </div>
     );

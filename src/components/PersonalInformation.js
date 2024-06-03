@@ -47,13 +47,15 @@ const aboutMe = [
 
 function PersonalInformation(){
     const classes = useStyles();
-    let list = aboutMe.map((item, index) => listItem(item, index))
     
     return (
         <Card className={`${classes.PersonalCard}`}>
             <List sx={{width: '100%', maxWidth: '250px', margin: '1px auto', bgcolor: 'background.paper'}}>
-                {list}
+                {aboutMe.map((item, index) => listItem(item, index))}
             </List>
+            <p style={{padding: '0 15px'}}>
+            If you found interesting, please feel free to contact me: <a href='mailto:hinng0302@gmail.com'>here</a>.
+            </p>
         </Card>
     );
 }

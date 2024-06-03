@@ -91,6 +91,9 @@ function App() {
                             <PersonalInformation />
                         </Grid>
                     </Grid>
+                    <Grid>
+                     <Career />
+                    </Grid>
                 </div>
             </div>
         </div>

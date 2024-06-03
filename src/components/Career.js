@@ -4,6 +4,7 @@ import tvb from '../img/tvb.png';
 import aswatson from '../img/aswatson.png';
 import mekim from '../img/mekim.png'
 import hkt from '../img/hkt.png'
+import airPublish from '../img/airpublishing.jpeg';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -13,7 +14,6 @@ const useStyles = makeStyles({
 });
 
 function timelineItemClasses(name, item, index){
-    console.log(index)
     return (
         <TimelineItem key={index} id={index} className={`${name}`}>
             <TimelineOppositeContent sx={{ m: 'auto 0' }} align="right" variant="body2" color="text.secondary">{item.timeRange}</TimelineOppositeContent>
@@ -33,7 +33,14 @@ function timelineItemClasses(name, item, index){
 
 const professionalLive = [
     {
-        timeRange: 'May 2020 - Present',
+        timeRange: 'Apr 2022 - Present',
+        company: 'Air Publishing Limited',
+        title: 'Web developer',
+        src: airPublish,
+        desc: 'Help migrating web service to cloud, and use the prevous cloud knowledge helps any code change.'
+    },
+    {
+        timeRange: 'May 2020 - Jan 2022',
         company: 'TVB New Media Group',
         title: 'Software Analyst',
         src: tvb,
